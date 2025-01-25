@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Solutec</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  
+</head>
+
+<body>
+<div class="topo">
+  
+</div>
+
+
+  <h1>
+    Cadastro de Clientes:
+  </h1>
+  <header id=topo>
+
+    NOME: <input type="text" id="nome"><br><br>
+      CPF: <input type="text" id="cpf">
+      <br><br>
+      ENDEREÇO: <input type="text" id="endereco"><br><br>
+      NUMERO: <input type="text" id="numero"><br><br>
+      BAIRRO: <input type="text" id="bairro"><br><br>
+      CIDADE: <input type="text" id="cidade"><br><br>
+      ESTADO: <input type="text" id="estado"><br><br>
+      PAÍS: <input type="text" id="pais"><br><br>
+      PONTO DE REFERÊNCIA: <input type="text" id="referencia"><br><br>
+      TELEFONE: <input type="text" id="telefone"><br><br>
+      E-MAIL: <input type="text" id="email"><br><br>
+      </br>
+
+
+      <input type="button" id="cad" value="Cadastrar" onclick="Cadastrar()">
+      <input type="button" id="show" value="Listar" onclick="MostrarTodos()">
+
+
+  </header>
+
+
+
+  <p id="msg"> </p>
+  <p id="msg2"></p>
+
+
+
+  <script>
+    var clientes = [];
+
+    function Cadastrar(nome, cpf, endereco, numero, bairro, cidade, estado, pais, referencia, telefone, email) {
+      var nome = document.getElementById("nome").value;
+      var cpf = document.getElementById("cpf").value;
+      var endereco = document.getElementById("endereco").value;
+      var numero = document.getElementById("numero").value;
+      var bairro = document.getElementById("bairro").value;
+      var cidade = document.getElementById("cidade").value;
+      var estado = document.getElementById("estado").value;
+      var pais = document.getElementById("pais").value;
+      var referencia = document.getElementById("referencia").value;
+      var telefone = document.getElementById("telefone").value;
+      var email = document.getElementById("email").value;
+
+
+      var cliente1 = new Cliente(nome, cpf, endereco, numero, bairro, cidade, estado, pais, referencia, telefone, email);
+      document.getElementById("nome").value = "";
+      document.getElementById("cpf").value = "";
+      document.getElementById("endereco").value = "";
+      document.getElementById("numero").value = "";
+      document.getElementById("bairro").value = "";
+      document.getElementById("cidade").value = "";
+      document.getElementById("estado").value = "";
+      document.getElementById("pais").value = "";
+      document.getElementById("referencia").value = "";
+      document.getElementById("telefone").value = "";
+      document.getElementById("email").value = "";
+      clientes.push(cliente1);
+      document.getElementById("msg").innerHTML = (cliente1.nome + " " + "cadastrado com sucesso!");
+
+    }
+
+    function Cliente(nome, cpf, endereco, numero, bairro, cidade, estado, pais, referencia, telefone, email) {
+      this.nome = nome;
+      this.cpf = cpf;
+      this.endereco = endereco;
+      this.numero = numero;
+      this.bairro = bairro;
+      this.cidade = cidade;
+      this.estado = estado;
+      this.pais = pais;
+      this.referencia = referencia;
+      this.telefone = telefone;
+      this.email = email;
+
+    }
+
+    function MostrarTodos() {
+      for (var i = 0; i < clientes.length; i++)
+        var texto = "<ul>";
+
+      {
+        texto += "<tr> </tr> ";
+        for (l = 0; l < clientes.length; l++) {
+          texto += "<tr>";
+          texto +=
+            "<ul>" + "Nome: " + clientes[l].nome + "</ul>" +
+            "<ul>" + "Cpf: " + clientes[l].cpf + "</ul>" +
+            "<ul>" + "Endereço: " + clientes[l].endereco + "</ul>" +
+            "<ul>" +"Numero: "+ clientes[l].numero + "</ul>" +
+            "<ul>" +"Bairro: "+ clientes[l].bairro + "</ul>" +
+            "<ul>" +"Cidade: " +clientes[l].cidade + "</ul>" +
+            "<ul>" +"Estado: "+ clientes[l].estado + "</ul>" +
+            "<ul>" + "País: "+ clientes[l].pais + "</ul>" +
+            "<ul>" +"Ponto de referencia: "+ clientes[l].referencia + "</ul>" +
+            "<ul>" +"Telefone: "+ clientes[l].telefone + "</ul>" +
+            "<ul>" + "E-mail: "+clientes[l].email + "</ul>"
+          texto += "</tr>";
+
+        }
+      }
+      texto += "</tr>";
+      document.getElementById("msg").innerHTML = texto;
+
+
+    }
+  </script>
+
+  <footer>
+
+    <p> Desenvolvido por Judson Vieira</p>
+  </footer>
+</body>
+
+</html>
+
+
+
+ 

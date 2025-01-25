@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="meucss/normalize.css">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Exercícios events</title>
+</head>
+
+<body>
+  <div class="exercicio1">
+    <h1>Exercício1</h1>
+    <h2>Crie um botão em html que chama código em
+      Javascript que dependendo do valor introduzido
+      mostra uma mensagem diferente. </h2>
+    <ul>
+      <li>Entre 0 e 10, 10 excluído, mostra “Insuficiente!”</li>
+      <li>Entre 10 e 14, 14 excluído, mostra “Bom!”</li>
+      <li>Maior que 14, mostra “Muito Bom!"</li>
+    </ul>
+
+    <input name="texto1" id="texto1" type="text" placeholder="Digite um texto" onblur="validar()">
+  </div>
+
+  <div class="exercicio2">
+    <h1>Exercício2</h1>
+    <h2>Crie duas caixas de texto </h2>
+    <ul>
+      <li>Na caixa de texto 1, o usuário clica em uma tecla.</li>
+      <li>Na caixa de texto 2, aparece o código da tecla na tabela ASCII.</li>
+    </ul>
+
+    <input id="texto2" type="text" placeholder="Digite um texto" onkeyup="validarAscii(event)">
+    <input id="texto3" type="text">
+  </div>
+
+
+  <script>
+    
+/*questao 1*/
+function validar() {
+  let num = document.querySelector("#texto1").value;
+  if (num < 10) {
+    alert("Insuficiente!");
+  } else if (num < 14) {
+    alert("Bom!");
+  } else {
+    alert("Muito Bom!");
+  }
+}
+
+
+/*questao2*/
+function validarAscii(event) {
+  let ascii = event.keyCode;
+  let resultado = document.querySelector("#texto3");
+  resultado.value = ascii;
+}
+
+
+
+    
+  </script>
+</body>
+
+</html>
+

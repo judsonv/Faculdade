@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>QUESTAO 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>Idade:</p>
+        <input type="text" id="numero"/>
+        <input type="button" value="add" onclick="add(numero.value)"/>
+        <input type="button" value="mostrar" onclick="mostrar()"/>
+        <p id="msg1"></p>
+        <p id="msg2"></p>
+        <p id="msg3"></p>
+        <p id="msg4"></p>
+        <p id="msg5"></p>
+        <p id="msg6"></p>
+        <script>
+            var numeros=new Array();
+            var maioridade=new Array();
+            var menoridade=new Array();
+          
+            function add(n){
+                numeros.push(n);
+                document.getElementById("msg1").innerHTML=numeros;
+                document.getElementById("numero").value='';
+            }
+          
+           function mostrar(){
+                document.getElementById("msg2").innerHTML="Maior= " + maioridade.filter(numeros => numeros.value() > 18 && numeros.value() < 100);
+             
+                document.getElementById("msg3").innerHTML="Menor= " +  menoridade.filter(numeros => numeros.value() > 0 && numeros.value() < 17);
+             
+                for(var i=0; i<numeros.length;i++){
+                    if(numeros[i]%2===0)
+                    {    
+                        maior.push(numeros[i]);
+                    }
+                    else
+                    {
+                        menor.push(numeros[i]);
+                    }
+                }
+                
+                document.getElementById("msg4").innerHTML="Maior " +maior + "tamanho= " + maioridade.length;
+                document.getElementById("msg5").innerHTML="Menor " +menor+ "tamanho= " + menoridade.length;
+                 Maior=new Array();
+             Menor=new Array();
+            }
+        </script>
+    </body>
+</html>
+    </body>
+</html>

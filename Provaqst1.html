@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Questao2</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  
+</head>
+
+<body>
+  
+  <h1>
+    Histórico de usuários
+  </h1>
+ 
+  <header>
+
+    NOME: <input type="text" id="nome"><br><br>
+    TIPO DA FILA: <input type="text" id="fila">
+      <br><br>
+ 
+      <input type="button" id="cad" value="Cadastrar" onclick="Cadastrar()">
+      <input type="button" id="show" value="Listar" onclick="MostrarTodos()">
+
+
+  </header>
+
+
+
+  <p id="msg"> </p>
+  <p id="msg2"></p>
+
+
+
+  <script>
+    var alunos = [];
+
+    function Cadastrar(nome, fila) {
+      var nome = document.getElementById("nome").value;
+      var fila=document.getElementById("fila").value;
+ 
+      var aluno1 = new Aluno(nome, fila);
+      document.getElementById("nome").value = "";
+      document.getElementById("fila").value = "";
+      alunos.push(aluno1);
+      document.getElementById("msg").innerHTML = (aluno1.nome + " " + "cadastrado com sucesso!");
+    }
+    
+
+    function Alunos(nome, fila) {
+      this.nome = nome;
+      this.fila = fila;
+      
+    }
+
+    function MostrarTodos() {
+      for (var i = 0; i < alunos.length; i++)
+        var texto = "<table border=1>";
+
+      {
+        texto += "<tr>  <th> Nome</th> <th>Fila</th>  </tr> ";
+        for (a = 0; a < alunos.length; a++) {
+          texto += "<tr>";
+          texto +=
+            "<td>" + alunos[l].nome + "</td>" +
+            "<td>" + alunos[l].fila + "</td>" +
+           
+          texto += "</tr>";
+
+        }
+      }
+      
+      texto += "</tr>";
+      document.getElementById("msg").innerHTML = texto;
+
+
+    }
+  </script>
+
+  
+</body>
+
+</html>

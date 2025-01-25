@@ -1,0 +1,205 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+    color:black;
+    text-align:center;
+    align-items: center;
+  }
+  body h1{
+    color: black;
+    text-align:center;
+  }
+  
+  /*menu*/
+  
+  nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #191971;
+  }
+  
+  /*link*/
+  
+  nav > a{
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-family: arial
+  }
+  
+  /*menu ui*/
+  
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    color: white;
+  }
+  
+  /*menu li*/
+  nav ul li {
+    text-align: center;
+    width: 100%
+  }
+  
+  /*menu ul li a*/
+  
+  nav ul li a{
+    display: inline-block;
+    padding: 10px, 0;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+  }
+  
+  /*header*/
+  
+  #header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image:url("../img/f2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:#191971;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #header h1{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 10px 10px 20px 20px;
+    background-color: black;
+    color: white;
+  }
+  
+  #header figure{
+    text-align:center;
+  
+  }
+  
+  #historia completa{
+     background-color:#191971;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align:center;
+   
+  }
+  
+  #section historia completa h3{
+    color: black;
+    text-align:center;
+  }
+  
+  header p{ margin-bottom: 2em;
+  }
+  
+  #sobre{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 10px 10px 20px 20px;
+    background-color:#191971
+    color: black;
+  }
+  
+  #sobre h2{
+    color: #131010;
+  }
+  
+  #sobre p{
+    color: black;
+    max-width:10010px;
+  }
+  
+  #sobre.botao{
+    background-color: white;
+  }
+  
+  .link{
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+  
+  
+  footer{
+  text-align: center;
+  padding: 10px;
+  background-color: black;
+  color:aqua;
+  }
+  
+  footer a{
+    text-decoration: none;
+    color: aqua;
+  }
+  
+  @media screen and (min-width: 768px){
+    nav{
+      flex-direction: none;
+      justify-content: space-around;
+    }
+  }
+    nav ul{
+      flex-direction: row;
+      width: 70%;
+    }
+    header{
+      height: 600px;
+      height: 600px;
+      justify-content: center;
+    }
+    
+  }
+  
+  
+  #sobre{
+    height: 250px;
+    height: 30vh;
+    justify-content: center;
+    min-height: 150px;
+  }
+  
+  
+  #historia completa{
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    max-width: 100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #historia completa h3{
+    text-align: center;
+    width: 100%;
+  }
+  
+  #historia completa .botao{
+    text-align: center;
+    width: 100%;
+  }
+  
+  
+  #Aprenda a jogar agora{
+  flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  #aprenda a jogar agora h4,h5, h6{
+    width:100%
+  }

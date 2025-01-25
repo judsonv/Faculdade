@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>LP II</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>Números:</p>
+        <input type="text" id="numero"/>
+      
+        <input type="button" value="add" onclick="add(numero.value)"/>
+      
+        <input type="button" value="mostrar" onclick="mostrar()"/>
+      
+        <p id="msg1"></p>
+        <p id="msg2"></p>
+        <p id="msg3"></p>
+        <p id="msg4"></p>
+        <p id="msg5"></p>
+        <p id="msg6"></p>
+        <script>
+            var numeros=new Array();
+            var pares=new Array();
+            var impares=new Array();
+
+          
+            function add(n){
+                numeros.push(n);
+                document.getElementById("msg1").innerHTML=numeros;
+                document.getElementById("numero").value='';
+            }
+
+          
+            function mostrar(){
+                document.getElementById("msg2").innerHTML="Maior= " + Math.max.apply(Math, numeros);
+                document.getElementById("msg3").innerHTML="Menor= " + Math.min.apply(Math, numeros);
+                
+                for(var i=0; i<numeros.length;i++){
+                    if(numeros[i]%2===0)
+                    {    
+                        pares.push(numeros[i]);
+                    }
+                    else
+                    {
+                        impares.push(numeros[i]);
+                    }
+                }
+                
+                document.getElementById("msg4").innerHTML="pares " +pares + " tamanho= " + pares.length;
+                document.getElementById("msg5").innerHTML="impares " +impares+ " tamanho= " + impares.length;
+                 pares=new Array();
+             impares=new Array();
+            }
+        </script>
+    </body>
+</html>

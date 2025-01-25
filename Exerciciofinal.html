@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de exercicios</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container" id="containerQuestao1">
+      <div class="questao1">
+        <h1>Questão 1</h1>
+        <label for="dinheiro" class="form-label"
+          >Um novo modelo de carro faz 20 km com 1 litro de combustível. Cada
+          litro de combustível custa R$ 5,00. Faça uma página que solicite ao
+          usuário quanto de dinheiro ele tem e em seguida informe quantos litros
+          de combustível ele pode comprar e quantos kilometros o carro consegue
+          andar com este tanto de combustível.</label
+        >
+        <input type="number" class="form-control" name="dinheiro" id="questao1InputDinheiro" />
+
+        <button type="button" class="btn btn-primary my-2" onclick="questao1()"> Calcular
+        </button>
+      </div>
+    </div>
+
+    <div class="container" id="containerQuestao2">
+      <div class="mb-3 questao2">
+        <h1>Questão 2</h1>
+        <label for="idade2" class="form-label"
+          >Peça ao usuário para digitar várias idades. Exiba quantas pessoas são
+          maiores de idade (18 anos) e quantas são menores.</label
+        >
+        <input type="number" class="form-control" id="questao2InputIdade" name="tentacles" min="0" max="130" placeholder="Digite a idade">
+
+        <button
+          type="button"
+          class="btn btn-secondary my-2"
+          onclick="questao2AdicionaPessoas()"
+        >
+          Adicionar
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          onclick="questao2ExibeQuantidade()"
+        >
+          Exibir pessoas
+        </button>
+      </div>
+    </div>
+
+    <div class="container" id="containerQuestao3">
+      <div class="mb-3 questao3">
+        <h1>Questão 3</h1>
+        <label for="questao3" class="form-label"
+          >Crie um campo texto no html que armazena o conteúdo em um array
+          sempre que você clicar no botão “Inserir”, e no botão “Lista”
+          apresente todos os dados em uma lista (ul).</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          name="questao3"
+          id="questao3Input"
+          placeholder="Digite alguma informação"
+        />
+
+        <button type="button" class="btn btn-secondary my-2" onclick="questao3AdicionaTexto()"> Adicionar </button>
+        <button type="button" class="btn btn-danger" onclick="questao3Listar()">
+          Listar
+        </button>
+      </div>
+    </div>
+
+
+    <div class="container" id="containerQuestao4">
+        <div class="mb-3 questao4">
+          <h1>Questão 4</h1>
+          <label for="questao4" class="form-label">
+            Faça uma página que tenha: <br>
+             <li>Duas caixas de texto (definir rótulos (label) com um valor mínimo e um valor máximo);</li>
+             <li> Um botão (com o label “contar”).</li>
+            <li>As caixas de texto tem algumas restrições:</li>
+            <li> Só podem aceitar números;<br>
+            <li>Sempre que um número for digitado, checar se o valor mínimo é menor que o valor máximo;</li>
+            <li>Quando clicamos no botão o componente deve contar e imprimir quantos números existem entre valor mínimo e valor máximo</li>
+            </label><br>
+          <div class="m-4">
+            <label for="questao4min" class="form-label">Valor Minimo</label>
+            <input type="number" class="form-control" name="questao4min" id="min" placeholder="Digite alguma informação" />
+
+            <label for="questao4max" class="form-label">Valor Maximo</label>
+            <input type="number" class="form-control" name="questao4max" id="max" placeholder="Digite um valor Maximo" onblur="questao4Validacao()"/>
+    
+            <button type="button" class="btn btn-secondary my-2" onclick="questao4ContaDiferencaEntreNumeros()"> Contar </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" id="containerQuestao5">
+        <div class="mb-3 questao5">
+          <h1>Questão 5</h1>
+          <label for="questao5" class="form-label">
+            Faça uma página web para receber os dados de alunos matriculados em uma disciplina.
+             Os atributos do aluno são: matrícula, nome e nota.
+            Capturar os dados digitados e armazenar em um objeto.
+            Ao final, imprimir na tela todos os dados do aluno.
+            
+            </label
+          ><br>
+          <div class="m-4">
+            <label for="questao5Matricula" class="form-label">Matricula:</label>
+            <input type="text" class="form-control" name="questao5Matricula" id="questao5Matricula" placeholder="Digite sua matricula" />
+
+            <label for="questao5Nome" class="form-label">Nome:</label>
+            <input type="text" class="form-control" name="questao5Nome" id="questao5Nome" placeholder="Digite seu nome" />
+
+            <label for="questao5Nota" class="form-label">Nota:</label>
+            <input type="text" class="form-control" name="questao5Nota" id="questao5Nota" placeholder="Digite sua matricula" />
+    
+            <button type="button" class="btn btn-secondary my-2" onclick="questao5mostrar()" type="submit">Mostrar </button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>
+
+

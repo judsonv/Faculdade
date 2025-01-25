@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <h2>Métodos Java Script To Lower Case()</h2>
+
+  <p>Digite seu nome com letra maiúscula:</p>
+  <input type="text" id="nome" /><br />
+  <br />
+  <input type="button" value="Confirme" onclick="myFunction(nome.value)" />
+  <input type="button" value="Primeiras" onclick="primeiras(nome.value)" />
+  <input type="button" value="Letras" onclick="letras(nome.value)" />
+  <br />
+  <input type="button" value="Sexo" onclick="Sexo()" />
+  <input type="button" value="Idade" onclick="Idade()" />
+
+
+  <p id="msg1"></p>
+  <p id="msg2"></p>
+  <p id="msg3"></p>
+  <p id="msg4"></p>
+  <p id="msg5"></p>
+
+
+  <script>
+    var nome = new Array();
+    var letras = new Array();
+    function myFunction() {
+      let text = document.getElementById("nome").value;
+      document.getElementById("msg1").innerHTML =
+        text.toLowerCase();
+    }
+
+    function primeiras() {
+      let text = document.getElementById("nome").value;
+      document.getElementById("msg2").innerHTML = text.slice(0, 4);
+    }
+
+
+    function letras(nome) {
+      var letras = 0;
+      var nome2 = nome.toUpperCase();
+      for (var i = 0; i < nome2.length; i++) {
+        if (nome2.charCodeAt(i) >= 65 && nome2.charCodeAt(i) <= 90) letras++;
+      }
+      document.getElementById("msg3").innerHTML = letras;
+    }
+
+
+    function sexo() {
+      document.getElementById("msg4").innerHTML = sexo;
+
+    }
+
+    function idade() {
+      document.getElementById("msg5").innerHTML = idade;
+    }
+
+  </script>
+
+
+</body>
+
+</html>

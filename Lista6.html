@@ -1,0 +1,98 @@
+<!--<html>
+
+<head>
+  <title>TODO supply a title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <div>Strings no JavaScript</div>
+  <br />
+  <input type="text" id="nome" />
+  <input type="button" value="minusculas" onclick="converte(nome.value)" />
+  <input type="button" value="primeiras" onclick="primeiras(nome.value)" />
+  <input type="button" value="letras" onclick="letras(nome.value)" />
+
+
+  <p id="msg1"></p>
+  <p id="msg2"></p>
+  <p id="msg3"></p>
+  <p id="msg4"></p>
+  <p id="msg5"></p>
+
+  <script>
+    function converte(nome) {
+      document.getElementById("msg1").innerHTML = nome.toLowerCase();
+
+    }
+    function primeiras(nome) {
+      document.getElementById("msg2").innerHTML = nome.substring(0, 4);
+
+    }
+    function letras(nome) {
+
+      var letras = 0;
+      var nome2 = nome.toUpperCase();
+      for (var i = 0; i < nome2.length; i++) {
+        if (nome2.charCodeAt(i) >= 65 && nome2.charCodeAt(i) <= 90)
+          letras++;
+      }
+      document.getElementById("msg3").innerHTML = letras;
+    }
+
+
+    function sexo() {    
+      document.getElementById("msg4").innerHTML = sexo;
+    }
+
+
+    function idade() {
+      document.getElementById("msg5").innerHTML - idade
+
+    }
+
+    
+  </script>
+  
+  <input type="text" id="complemento" />
+  <input type="button" value="sexo" onclick="sexo()" />
+  <input type="button" value="idade" onclick="idade()" />
+
+  
+</body>
+
+</html>-->
+
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Digite as informações:</div>
+        Nome:<input type="text" id="nome"/><br><br>
+        Sexo<input type="text" id="sexo"/><br><br>
+        Idade<input type="text" id="idade"/><br><br>
+        <input type="button" value="ok" 
+          onclick="verifica(nome.value,sexo.value,idade.value)"/>
+        <p id="msg"></p>
+        <script>
+            function verifica(nome,sexo,idade){
+                if(sexo.toUpperCase()==="FEMININO" && idade<25)
+                  document.getElementById("msg").innerHTML=nome + " ACEITA";
+              else
+                  document.getElementById("msg").innerHTML=nome + " NÃO ACEITA";
+            }
+        </script>    
+        
+    </body>
+</html>

@@ -1,0 +1,129 @@
+<!--<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Array</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Criando Arrays </h1>
+  <script>
+    var mochila=new Array();
+    mochila[0]="corda";
+    mochila[1]="faca";
+    mochila[2]="arame";
+    mochila[3]="lanterna";
+    mochila[4]="pedra";
+    //for(var i=0;i<=4; i++);
+    
+    document.write(mochila[0]+"<br>");
+    document.write(mochila[1]+"<br>");
+    document.write(mochila[2]+"<br>");
+    document.write(mochila[3]+"<br>");
+    document.write(mochila[4]+"<br>");
+  </script>
+</body>
+</html>-->
+
+<!--com dois tipos tosstring e join<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Array</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Arrays: Método toString() </h1>
+  <p id="demo"></p>
+  <p id="demo2"></p>
+  <script>
+    var frutas = ["Banana", " Laranja", " Maçã", " Manga."];
+    document.getElementById("demo").innerHTML = frutas.toString();
+    document.getElementById("demo2").innerHTML = frutas.join("*");
+  </script>
+</body>
+</html>-->
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Array</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Arrays: Método toString() </h1>
+  <p id="demo"></p>
+  <p id="demo2"></p>
+  <script>
+    var frutas = ["Banana", " Laranja", " Maçã", " Manga."];
+    document.getElementById("demo").innerHTML = frutas.toString();
+    frutas.pop();
+    document.getElementById("demo2").innerHTML = frutas.join("<br>");
+  </script>
+</body>
+</html>-->
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Array</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Arrays: Método toString() </h1>
+   <h2>Método Join </h2>
+  <h3>Método Pop </h3>
+  <p id="demo"></p>
+  <p id="demo2"></p>
+  <p id="demo3"></p>
+   
+  <script>
+    var frutas = ["Banana", " Laranja", " Maçã", " Manga."];
+    document.getElementById("demo").innerHTML = frutas.toString();
+    frutas.pop();
+    document.getElementById("demo2").innerHTML = frutas.join("<br>");
+    frutas.join();
+    document.getElementById("demo3").innerHTML = frutas.join("<br>");
+    frutas.push("Pequi");
+    document.getElementById("demo3").innerHTML=frutas.join(" - ");
+  </script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Array</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Arrays: método push()</h1>
+  Frutas: <input id="fruta" type="text"/>
+  <input value="adicionar" type="button" onclick="adiciona(fruta.value)"/>
+  <p id="demo"></p>
+  
+  <script>
+     var array=new Array();
+  function adiciona(fruta){
+    array.push(fruta);
+    document.getElementById("demo").innerHTML=array;
+    document.getElementById("fruta").value='';
+  } 
+  </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Array</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <p>Numeros</p>
+  <input type="text" id="numero"/><br/><br/>
+  <input type="button" value="add" onclick="add(numero.value)"/>
+  <input type="button" value="tamanho" onclick="tamanho()"/>
+  <p id="msg1"></p>
+  <p id="msg2"></p>
+  
+    
+  <script>
+    var numeros=new Array();
+    
+    function add(n) {
+      numeros.push(n);
+      document.getElementById("msg1").innerHTML=numeros; 
+      
+    }
+     function tamanho(){
+       document.getElementById("msg2").innerHTML=numeros.length;
+     }
+  </script>
+  
+</body>
+</html>-->
+
+
+
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Array</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <p>Numeros</p>
+  <input type="text" id="numero"/><br/><br/>
+  <input type="button" value="add" onclick="add(numero.value)"/>
+  <input type="button" value="tamanho" onclick="tamanho()"/>
+    <input type="button" value="inverter" onclick="inverter()"/>
+  <p id="msg1"></p>
+  <p id="msg2"></p>
+  <p id="msg3"></p>
+  
+    
+  <script>
+    var numeros=new Array();
+    
+    function add(n) {
+      numeros.push(n);
+      document.getElementById("msg1").innerHTML=numeros; 
+      
+    }
+     function tamanho(){
+       document.getElementById("msg2").innerHTML=numeros.length;
+     }
+  </script>
+  
+</body>
+</html>

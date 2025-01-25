@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> Formulários</title>
+</head>
+ <body>
+  <form action="servidor.php" method="POST">
+<br> Você gostou dessa home page?<br>
+<INPUT TIPE="RADIO" NAME="pergunta"
+VALUE= "sim">sim<p>
+<INPUT TIPE="RADIO" NAME="pergunta"
+VALUE= "nao">não<p>  
+
+<br> Qual esporte você gosta?<br>
+<INPUT TIPE="CHECKBOX" NAME="Mosaic" VALUE="fut">Futebol
+<INPUT TIPE="CHECKBOX" NAME="Mosaic"VALUE="vol">Volei
+
+<SELECT MULTIPLE NAME="nomeDAlista">
+
+<OPTION SELECT VALUE="Valor de retorno"> Valor Visualizado
+<OPTION SELECT VALUE="Valor de retorno"> Valor Visualizado 2
+  
+
+<br>Digite um comentário<br>
+
+<TEXTAREA NAME="nome" COLS= "20" ROWS"3"> texto</TEXTAREA>
+
+<br>
+<INPUT TIPE="RESET" VALUE="Limpar">
+<INPUT TIPE="SUBMIT" VALUE="Enviar">
+
+<br> <br> 
+
+
+  </form>
+</body>
+</html>
+
+.credit{
+  background: rgba(0,0,0,0.75);
+  font-size: 1,3em;
+  color: whitesmoke;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+
+.credit a{
+  color: turquoise;
+  transition: 1s;
+
+}
+credit a:hover{
+  color: white;
+  text-shadow: 0 0 8px white;
+}

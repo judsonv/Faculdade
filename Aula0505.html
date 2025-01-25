@@ -1,0 +1,89 @@
+<!--<!DOCTYPE html> QUESTÃO 1 FALTA TERMINAR
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Arrays (2)</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h><b><br><br>Lista de exercícios 2:</br></br></b></h>
+  <input type="text" id="numero" />
+  <input type="button" value="add" onclick="add(numero.value)" />
+  <input type="button" value="mostrar" onclick="mostrar()" />
+
+  <p id="msg1"></p>
+  <p id="msg2"></p>
+  <p id="msg3"></p>
+
+
+  <script>
+    var numeros = new Array();
+   var i;
+
+
+    function add(n) {
+      numeros.push(n);
+      document.getElementById("msg1").innerHTML = numeros;
+      document.getElementById("numero").value = '';
+    }
+
+    numeros.sort(crescente);
+     function crescente(a, b) {
+      return a - b;
+    
+
+    for (var i = 0; i < numeros.length; i++) {
+      
+    }
+}
+    
+
+    
+function mostrar() { 
+  document.getElementById("msg2").innerHTML = numero[i];
+}
+  
+
+
+  </script>
+</body>
+
+</html>-->
+
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Arrays (2)</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h><b><br><br>Lista de exercícios 2:</br></br></b></h>
+  Nome: <input type="text" id="nome"/> <br/>
+  <br/>
+  Sobrenome: <input type="text" id="sobrenome""/><br/>
+  <br/>
+  <input type="button" value="mostrar" onclick="mostrar()" />
+
+  
+  <p id="msg1"></p>
+
+  <script>
+    var nome = new Array();
+    var sobrenome = new Array();
+    var uniao = nome.concat(sobrenome);
+
+    
+    function mostrar() {
+      document.getElementById("msg1").innerHTML = uniao();
+    }
+  </script>
+</body>
+
+</html>

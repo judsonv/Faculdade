@@ -1,0 +1,123 @@
+<!--<html>
+    <head>
+        <title>QUESTAO 1 pta</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+     <script>
+        var medida1=parseInt(prompt("Digite a largura: "));
+         var medida2=parseInt(prompt("Digite a altura: "));
+         
+         var area = medida1*medida2;
+         
+         document.write("A ÁREA DO RETANGULO É: " + area);
+                
+     </script>
+
+    </body>
+</html> -->
+
+
+<!--<html>
+    <head>
+        <title>QUESTAO 1 ptb</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+     <script>
+        var medida1=parseInt(prompt("Digite a largura: "));
+         var medida2=parseInt(prompt("Digite a altura: "));
+         
+         var perimetro = 2*medida1+2*medida2;
+         
+         document.write("O PERÍMETRO DO RETANGULO É: " + perimetro);
+                
+     </script>
+
+    </body>
+</html>-->
+
+<!--<html>
+    <head>
+        <title>QUESTAO2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+      <body>
+          <script>
+            function minhafuncao(n1,n2,n3,n4){
+                document.getElementById("msg").innerHTML=(n1+n2+n3+n4)/4;
+            }
+       </script>
+       <form>
+           Idade1:<input type="text" id="num1"/>
+           Idade2:<input type="text" id="num2"/>
+           Idade3:<input type="text" id="num3"/>
+           Idade4:<input type="text" id="num4"/>
+           
+         <input type="button" value="Calcular"  onclick="minhafuncao(parseInt(num1.value),parseInt(num2.value),parseInt(num3.value),parseInt(num4.value))"/>               
+       </form>
+        <p id="msg"></p>
+    </body>
+   </html> -->
+
+
+   <!--<html>
+      <head>
+        <title>QUESTAO 3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           </head>
+         <body>
+      <script>
+        
+      function minhafuncao(n1,n2){
+        if(n1<n2){
+          document.write(" O maior número é: " + n2);
+        }
+        
+        else ("O maior o número é: " + n1)
+        
+      document.getElementById("msg").innerHTML=minhafuncao(n1,n2);
+      }
+        
+      </script>   
+      
+    <form>
+        Numero1:<input type="text" id="num1"/>
+        Numero2:<input type="text" id="num2"/>
+        <input type="button" value="Mostre o maior"  onclick="minhafuncao((num1.value),(num2.value));"/>   
+      
+         
+      </form>
+    </body>
+</html>-->
+
+<html>
+    <head>
+        <title>QUESTAO 4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+      <body>
+          <script>
+            function minhafuncao(h,p);{
+            if(imc>25){
+                document.getElementById("msg").innerHTML="acima do peso";
+        }
+        else ("Peso ideal");
+     
+      } 
+            
+       </script>
+       <form>
+           Digite a altura:<input type="text" id="h"/>
+           Digite o peso:<input type="text" id="p"/>    
+ <input type="button" value="IMC"  onclick="minhafuncao((h.value),(p.value))"/>
+   
+       </form>
+    <p id="msg"> </p>    
+    </body>
+   </html> 

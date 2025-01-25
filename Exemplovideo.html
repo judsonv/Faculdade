@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Lista de Números ordenada: </h1><br/>
+  <input type="text" id="numero"/><br/>
+   <br/>
+  <input type="button" value="add" onclick="add(numero.value)"/>
+  
+  <input type="button" value="mostrar" onclick="mostrar()"/>
+  
+  <input type="button" value="decrescente" onclick="decrescente(numero.value)"/>
+  
+  
+
+  
+  <p id="msg1"></p>
+  <p id="msg2"</p>
+  <p id="msg3"</p>
+  <p id="msg4"</p>
+  <p id="msg5"></p>
+  
+
+  <script>
+    var numeros = new Array();
+    var crescente = new Array();
+    var decrescente = new Array();
+     
+    
+    function add(n){
+      numeros.push(n);
+      document.getElementById("msg1").innerHTML=numeros;
+      document.getElementById("numero").value=' ';
+    }
+
+
+    
+    function mostrar(){
+      document.getElementById("msg2").innerHTML="Crescente: "+ numeros.sort(ordenacao);  
+    }
+    
+function ordenacao(a,b){
+  return a-b;
+}
+for(var i=0; i<numeros.length; i++){
+  document.write(numeros[i] + '<br>');
+}
+
+    function decrescente(){
+      document.getElementById("msg4").innerHTML="Decrescente: "
+      + numeros[i] + numeros.reverse();
+    }
+
+   
+    
+    crescente = new Array();
+    decrescente = new Array();
+  </script>
+</body>
+
+</html>
+
+
+
+

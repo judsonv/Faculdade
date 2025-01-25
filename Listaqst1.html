@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>LISTA DE EXERCÍCIOS</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>LISTA DE EXERCÍCIOS</h1>
+QUESTÃO 1.<br><br>
+
+Digite quanto de dinheiro você tem? <input type="text" id="e1" onblur="question1()"/>
+
+<p id="p01"></p>
+<p id="p02"></p>
+
+QUESTÃO 2<br><br>
+
+Digite várias idades: <input type="text" id="e2" />
+<input type="button" value="add" onclick="question21(e2.value)"/>
+<input type="button" value="exibir"  onclick="question22()"/>
+
+<p id="p03"></p>
+<p id="p04"></p>
+<p id="p05"></p>
+
+QUESTAO 3 (ul).<br><br>
+
+Digite qualquer conteúdo: <input type="text" id="e3" size="30"/>
+<input type="button" value="inserir" onclick="question31(e3.value)"/>
+<input type="button" value="listar" onclick="question32()"/>
+  
+<p id="p06"></p>
+<p id="p07"></p>
+
+QUESTAO 4<br><br>
+
+<label>Valor mínimo: <input type="text" id="e41" size="6" onblur="question41((parseInt(e41.value)),(parseInt(e42.value)))" onfocus="question412()" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/></label>
+<label>Valor máximo: <input type="text" id="e42" size="6" onblur="question41((parseInt(e41.value)),(parseInt(e42.value)))" onfocus="question412()" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/></label>
+<labe><input type="button" value="contar" onclick="question42((parseInt(e41.value)),(parseInt(e42.value)))"/></labe>
+
+<p id="p08"></p>
+<p id="p09"></p>
+  <p id="p10"></p>
+
+
+<script>
+  
+function question1(){
+  e1=document.getElementById("e1").value;
+  
+  var lit = e1/5;
+  var kil = lit*20;
+  
+document.getElementById("p01").innerHTML= "Você pode comprar "+lit+" litros de combustível.";
+document.getElementById("p02").innerHTML= "O carro consegue andar "+kil+" kilometros com este tanto de combustível.";
+}
+
+var idades=new Array();
+var maiores=new Array();
+var menores=new Array();
+           
+function question21(n){
+idades.push(n);
+
+document.getElementById("p03").innerHTML="Idades digitadas: "+idades;
+  
+document.getElementById("e2").value='';
+}
+
+function question22(){        
+                
+ for(var i=0; i<idades.length;i++){
+  if(idades[i]>=18)
+     {    
+     maiores.push(idades[i]);
+     }
+   else
+    {
+      menores.push(idades[i]);
+    }
+ }
+
+document.getElementById("p04").innerHTML="Quantidade de pessoas maiores de idade: "+maiores.length;
+
+document.getElementById("p05").innerHTML="Quantidade de pessoas menores de idade: "+menores.length;
+  
+maiores=new Array();
+menores=new Array();
+}
+
+var conteudos=new Array();
+  
+function question31(n){
+conteudos.push(n);
+
+document.getElementById("e3").value='';
+}
+
+function question32(){
+texto = "<ul>";
+for (var i=0; i<conteudos.length; i++){
+texto += "<li>"+conteudos[i]+"</li>";
+}
+texto += "</ul>";
+document.getElementById("p06").innerHTML=texto;
+}
+
+function question41(a,b){
+if(a>b){
+document.getElementById("p08").innerHTML="O valor mínimo tem que ser menor que o valor máximo!!";
+
+document.getElementById("p09").innerHTML="";
+}
+}
+
+function question412(){
+document.getElementById("p08").innerHTML="";
+}
+
+function question42(a,b){
+  
+var contador = 0;
+var inicio = a+1;
+var fim = b;
+  
+for (i=inicio; i<fim; i++){
+  contador++;
+}
+  
+document.getElementById("p09").innerHTML="Quantidade de números que existem entre valor mínimo e valor máximo: "+contador+" números";
+
+document.getElementById("p10").innerHTML="";
+document.getElementById("p08").innerHTML="";
+}
+
+
+</script>
+
+</body>
+
+</html>
+
+
+
+
+   

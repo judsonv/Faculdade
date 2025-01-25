@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Prova</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1> Cálculos </h1>
+  <p>Número1: <input type="text" id="n1"> </p>
+  <p>Número2:<input type="text>" id="n2" </p></br></br>
+ 
+  
+  
+  <input type="button" value="multiplicar" onclick="cal(parseInt(n1.value),parseInt(n2.value))">
+
+  
+  
+  
+  <input type="button" value="subtrair" onclick="sub(parseInt(n1.value),parseInt(n2.value))">
+<input type="button" value="somar" onclick="som(parseInt(n1.value),parseInt(n2.value))">
+  <input type="button" value="dividir" onclick="div(parseInt(n1.value),parseInt(n2.value))">
+  
+  <p id="msg1"></p>
+  <p id="msg2"></p>
+  <p id="msg3"></p>
+  <p id="msg4"></p>
+  <p id="msg5"></p>
+
+  
+  <script id=a>
+    function cal(n1, n2) {
+      var x = n1 * n2;
+    
+      
+      document.getElementById("msg1").innerHTML="Mutiplicação: " + x;
+    }
+  </script>
+
+  <script id=b>
+    function sub(n1,n2){
+      var y= n1-n2;
+      document.getElementById("msg2").innerHTML="Divisão: " + y;
+    }
+  </script>
+
+  
+   <script id=c>
+    function som(n1,n2){
+      var z= n1+n2;
+      document.getElementById("msg3").innerHTML="Soma: " + z;
+    }
+   </script>
+  
+<script id=d>
+    function div(n1,n2){
+      var k= n1/n2;
+      document.getElementById("msg4").innerHTML="Dividir: " + k;
+    }
+   </script>
+  
+
+</body>
+
+</html>

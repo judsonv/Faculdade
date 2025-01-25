@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Aluno</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  
+</head>
+
+<body>
+<div class="topo">
+  
+</div>
+
+
+  <h1>
+    Histórico de Alunos:
+  </h1>
+  <header id=topo>
+
+    MATRÍCULA: <input type="text" id="matricula"><br><br>
+      NOME: <input type="text" id="nome">
+      <br><br>
+      NOTA: <input type="text" id="nota"><br><br>
+      
+
+
+      <input type="button" id="cad" value="Registrar" onclick="Cadastrar()">
+      <input type="button" id="show" value="Listar" onclick="MostrarTodos()">
+
+
+  </header>
+
+
+
+  <p id="msg"> </p>
+  <p id="msg2"></p>
+
+
+
+  <script>
+    var alunos = [];
+
+    function Cadastrar(matricula, nome, nota) {
+      var matricula = document.getElementById("matricula").value;
+      var nome = document.getElementById("nome").value;
+      var nota = document.getElementById("nota").value;
+      
+
+
+      var aluno1 = new Aluno(matricula, nome, nota);
+      document.getElementById("matricula").value = "";
+      document.getElementById("nome").value = "";
+      document.getElementById("nota").value = "";
+      
+      alunos.push(aluno1);
+      document.getElementById("msg").innerHTML = (aluno1.nome + " " + "aluno registrado com sucesso!");
+
+    }
+
+    function Aluno(matricula, nome, nota) {
+      this.matricula = matricula;
+      this.nome = nome;
+      this.nota = nota;
+      
+
+    }
+
+    function MostrarTodos() {
+      for (var i = 0; i < alunos.length; i++)
+        var texto = "<ul>";
+
+      {
+        texto += "<tr> </tr> ";
+        for (a = 0; a < alunos.length; a++) {
+          texto += "<tr>";
+          texto +=
+            "<ul>" + "Matricula: " + alunos[a].matricula+ "</ul>" +
+            "<ul>" + "Nome: " + alunos[a].nome + "</ul>" +
+            "<ul>" + "Nota: " + alunos[a].nota + "</ul>" + texto + "</tr>";
+
+        }
+      }
+      texto += "</tr>";
+      document.getElementById("msg").innerHTML = texto;
+
+
+    }
+  </script>
+
+</body>
+
+</html>
+
+
+
+ 

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Seminário</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <section id="intro">
+<h1> <center>Introdução ao estudo da Geometria</center> </h1></section>
+  <p>
+       O conhecimento geométrico como conhecemos hoje nem sempre foi assim. A geometria surgiu de forma intuitiva, e como todos os ramos do conhecimento, nasceu da necessidade e da observação humana.
+Conhecimentos geométricos também foram necessários aos sacerdotes. Por serem os coletores de impostos da época, a eles era incumbida a demarcação das terras que eram devastadas pelas enchentes do Rio Nilo. A partilha da terra era feita diretamente proporcional aos impostos pagos. Enraizada nessa necessidade puramente humana, nasceu o cálculo de área.
+Foi em 300 a.C. que o grande geômetra Euclides de Alexandria desenvolveu grandiosos trabalhos matemático-geométricos e os publicou em sua obra intitulada Os Elementos. Essa foi, e continua sendo, a maior obra já publicada - desse ramo - de toda a história da humanidade.  A Geometria plana, como é popularmente conhecida nos dias atuais, leva também o título de <b>Geometria Euclidiana</b>  em homenagem ao seu grande mentor <b>Euclides de Alexandria.</b>
+  <br>
+  </p>
+  
+<section id="calculo">
+    <h2><center>O cálculo de áreas</center></h2></section>
+<p>
+  Conhecer sobre área é conhecer sobre o espaço que podemos preencher em regiões poligonais convexas – qualquer segmento de reta com extremidades na região só terá pontos pertencentes a esta.
+O cálculo de áreas tem muita aplicabilidade em diferentes momentos, seja em atividades puramente cognitivas, ou até mesmo trabalhistas. Um exemplo de profissional que faz uso dessa ferramenta para tornar possível o desempenho do seu trabalho é o pedreiro. É através do conhecimento de área que é possível estimar a quantidade de cerâmica necessária para pavimentar um determinado cômodo de uma casa, por exemplo.
+</p>
+  
+  
+  <section id="retan"><h2 id="ret"><center>O retângulo</center></h2></section>
+  O retângulo é uma figura geométrica plana cujos lados opostos são paralelos e iguais e todos os ângulos medem 90º. Confiram o retângulo abaixo:
+  <figure><img src="retangulo.jpg"></figure>
+  <p>Para calcular a área do retângulo, basta que se multipliquem sua base b pela sua altura h.
+Área do retângulo = base x altura ou 
+<b>A=b.h</b>
+</p>
+  <p>
+<b>Exemplo:</b>
+
+Num campeonato de futebol a equipe organizadora do evento está providenciando o gramado que será plantado em toda área do campo. Para comprar as gramas, a equipe precisa saber a área do campo, pois a grama é vendida por metro quadrado. Sabendo que o campo tem 115 m de comprimento por 75 m de largura e ainda que o campo tem o formato retangular, ajude a equipe a solucionar o problema, diga quantos metros quadrados de área tem o campo de futebol? 
+  </p>
+  <li>O campo de futebol tem o formato de um retângulo;</li>
+  <li>A base ou comprimento equivale a 115 m;</li>
+  <li> A altura ou largura são 75 m;</li>
+  <li>A área do retângulo é <b>A=b.h</b></li>
+  Com base nos dados temos:
+  <b>A=b.h, ou seja b=115m e h=75m</b>
+  <figure><img src="campo.jpg"></figure>
+  <p>A=115.75 então temos que A=8625 m2</p>
+  
+ <section id="refer"> <p><b>Referência bibliográfica:</b>Ferret, Rodrigo Bozi. <b>História e filosofia da matemática.</b> Aracaju: Gráf. UNIT, 2007
+Texto originalmente publicado em https://www.infoescola.com/matematica/geometria-plana-conceitos-historicos-e-calculo-de-areas/
+</p></section> 
+
+<section id="calculo2"><h1 id="areaa">Área do retângulo</h1>
+  <p>Digite os valores da área do retângulo</p>
+  <form>
+  Base: <input type="text" id="b1"/> <br>
+    </br>
+ Altura: <input type="text" id="h2"/><br>
+    </br>
+  <input type="button" onclick="ret(parseInt(b1.value),parseInt(h2.value))" value="Cacular"/>
+</form>
+  <p id="result"></p>
+  <script id="area">
+  function ret(b1,h2){
+    var r=b1*h2;
+    document.getElementById("result").innerHTML="Área do retângulo é= "+r;
+  } 
+  </script>
+  </section>
+  <section id="question">
+<p><h3><center>Questão 1</center></h3></p>
+<p>1 - Com base no texto apresentado assinale a alternativa correta:</p>
+<ul>a) Euclides de Alexandria foi o autor do livro os elementos.</ul> 
+<ul>b) O livro os elementos, foi escrito por Albert Einsten grande geômetra da época.</ul>
+<ul>c) O grande matemático Leonardo da Vinci foi o escrito do livro Os elementos.</ul> 
+<ul>d) O livro os elementos, foi escrito por Machado de Assis, grande mestre em matemático brasileiro.</ul>
+  
+<input type="button" onclick="res(parseInt(a.value))" value="Ver resposta"/>
+  <p id="q"></p>
+  <script id="questao">
+    var a= "a)Euclides de Alexandria foi o autor do livro os elementos."
+  function res(){
+    var resposta=a;
+    document.getElementById("q").innerHTML="A resposta correta é= " + resposta;
+  } 
+</script>
+  </section>
+  <section id="question2">
+  <p><h3 id="quest3"><center>Questão 2</center></h3></p>
+  <form id="q2">
+<p>2 - Indique qual é a fórmula correta do cálculo da área de um retângulo:</p>
+<ul id="correta">a) A=b.h</ul> 
+<ul id="inc1">b) E=m.c2 </ul>
+<ul id="inc2">c) F=m.a </ul> 
+<ul id="inc3">d) M= C .(1+i).t </ul>
+    
+
+  <input type="button" onclick="resp(parseInt(q2.value))" value="Ver resposta"/>
+  
+  </form>
+  <script id="questao2">
+  function resp(){
+    var pai=document.getElementById("q2");
+    var elemento=document.getElementById("inc1")
+    pai.removeChild(inc1);
+    var elemento=document.getElementById("inc2")
+    pai.removeChild(inc2);
+    var elemento=document.getElementById("inc3")
+    pai.removeChild(inc3);
+    } 
+  </script>
+  </section>
+</body>
+
+
+</html>

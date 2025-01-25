@@ -1,0 +1,64 @@
+<!--<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Exemplo 1</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1><center>Objetos</center></h1>
+<p id="msg"></p>
+  
+  
+  <script>
+    var carro={marca:"Fiat", modelo:"Uno", cor:"branco", ano:"2015"};
+    document.getElementById("msg").innerHTML="Carro: " + carro.modelo;
+  </script>
+
+  
+</body>
+
+</html>-->
+
+
+<!DOCTYPE html>
+<html>
+
+  <body>
+    <h3>Criando Array de objetos</h3> <br>
+    <input type="button" value="carros" onclick="MostrarCarros();">
+
+    <p id="resposta"></p>
+
+    <script >
+    function MostrarCarros(){
+      var arrayCarros=[];
+
+      var meucarro = new Carro("Ford", " Ka ", 2000);
+      arrayCarros.push(meucarro);
+
+      var carropai = new Carro("Fiat", " Uno ", 1990);
+      arrayCarros.push(carropai);
+
+      var carroirma = new Carro("Ford", " Ranger ", 2010);
+      arrayCarros.push(carroirma);
+
+     //imprime todo o arrayCarros
+    texto = "<ul>";
+    for (var i = 0; i < arrayCarros.length; i++) {
+      texto += "<li>" + arrayCarros[i].marca + arrayCarros[i].modelo +arrayCarros[i].ano + "</li>";     
+    } 
+     document.getElementById("resposta").innerHTML =texto; 
+    }
+
+    function Carro(marca, modelo, ano) {
+      this.marca = marca;
+      this.modelo = modelo;
+      this.ano = ano;
+    }
+    </script>
+  </body>
+</html>

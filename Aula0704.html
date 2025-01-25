@@ -1,0 +1,68 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Aula 07/04</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="corpo">
+  <h1>COMO ADICIONAR ELEMENTOS NO HTML?</h1>
+  <p>USANDO JAVASCRIPT </p>
+  Nome:<input type="text" id="texto"/>
+  <input type="button" value="ok" onclick="adicionar()"/>
+  <script>
+    function adicionar(){
+      var nome=document.getElementById("texto").value;
+      var p=document.createElement("p");
+      p.innerHTML=nome + " cadastrado com sucesso ";
+      var corpo=document.getElementById("corpo");
+      corpo.appendChild(p);     
+    }
+  </script>
+</body>
+</html>-->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Aula 07/04</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="corpo">
+  <h1 id="titulo">JavaScript Funções</h1>
+  <p>DIGITE DOIS NÚMEROS E DEPOIS CLIQUE NO BOTÃO CALCULAR: </p>
+  Número1:<input type="text" id="texto" /><br>
+  <br>
+  Número2:<input type="text" id="texto2" /><br>
+  <br>
+  <input type="button" value="Calcular" onclick="adicionar()"/>  
+  
+  <input type="button" value="Remover" onclick="remover()"/>
+
+  
+  <script>
+ function remover() {
+      var pai = document.getElementById("corpo");
+      var filho = document.getElementById("titulo");
+       pai.removeChild(filho);
+    }
+    
+    function adicionar() {
+      var Número1 = document.getElementById("texto").value;
+      var Número2 = document.getElementById("texto2").value;
+      var p = document.createElement("p");
+      p.innerHTML = (texto.value * texto2.value);
+      var corpo = document.getElementById("corpo");
+      corpo.appendChild(p);
+    }
+  </script>
+</body>
+
+</html>
